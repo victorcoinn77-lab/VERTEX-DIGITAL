@@ -38,7 +38,7 @@ export const servicesData: Service[] = [
       "Relatórios em Tempo Real e Otimização Semanal"
     ],
     icon: "TrendingUp",
-    priceEstimate: "A partir de R$ 1.500/mês"
+    priceEstimate: "Sob Consulta"
   },
   {
     id: "web",
@@ -53,7 +53,7 @@ export const servicesData: Service[] = [
       "Hospedagem em CDN Global (Vercel/Netlify)"
     ],
     icon: "Monitor",
-    priceEstimate: "A partir de R$ 2.900"
+    priceEstimate: "Sob Consulta"
   },
   {
     id: "saas",

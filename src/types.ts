@@ -54,5 +54,4 @@ export interface leadFormData {
   companyName: string;
   service: string;
   projectDescription: string;
-  estimatedBudget: string;
 }

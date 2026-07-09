@@ -97,17 +97,6 @@ export default function Hero({ onBudgetClick }: HeroProps) {
               className="pt-6 border-t border-slate-100 dark:border-neutral-900 flex flex-wrap items-center justify-center lg:justify-start gap-y-4 gap-x-8"
               id="hero-trust-row"
             >
-              <div className="flex items-center space-x-2">
-                <div className="flex -space-x-1">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <Star key={i} className="w-4 h-4 text-amber-500 fill-amber-500" />
-                  ))}
-                </div>
-                <span className="text-xs font-semibold text-slate-700 dark:text-neutral-300">
-                  ★ 5.0 no Google
-                </span>
-              </div>
-
               <div className="flex items-center space-x-1.5">
                 <ShieldCheck className="w-4.5 h-4.5 text-slate-900 dark:text-neutral-300" />
                 <span className="text-xs font-medium text-slate-500 dark:text-neutral-400">
@@ -157,19 +146,12 @@ export default function Hero({ onBudgetClick }: HeroProps) {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-slate-300/10 dark:bg-neutral-800/10 rounded-full blur-[60px] pointer-events-none" />
 
               {/* Estatísticas Principais */}
-              <div className="grid grid-cols-2 gap-4 relative z-10">
+              <div className="grid grid-cols-1 gap-4 relative z-10">
                 <div className="p-3.5 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 bg-white/50 dark:bg-neutral-950/40">
                   <div className="text-[10px] font-mono text-neutral-400 uppercase">Leads Qualificados</div>
                   <div className="text-2xl font-display font-semibold text-neutral-900 dark:text-white mt-1">4.821</div>
                   <div className="text-[10px] text-emerald-500 font-semibold flex items-center mt-0.5">
                     ↑ 38.4% esta semana
-                  </div>
-                </div>
-                <div className="p-3.5 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 bg-white/50 dark:bg-neutral-950/40">
-                  <div className="text-[10px] font-mono text-neutral-400 uppercase">Faturamento Gerado</div>
-                  <div className="text-2xl font-display font-semibold text-neutral-900 dark:text-white mt-1">R$ 1.8M</div>
-                  <div className="text-[10px] text-emerald-500 font-semibold flex items-center mt-0.5">
-                    ↑ 18.2% de ROAS médio
                   </div>
                 </div>
               </div>
