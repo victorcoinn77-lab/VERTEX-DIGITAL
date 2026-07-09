@@ -71,11 +71,11 @@ export default function Header({ theme, setTheme, onBudgetClick }: HeaderProps) 
             className="flex items-center space-x-2 group"
             id="header-logo"
           >
-            <div className="w-8 h-8 bg-slate-950 dark:bg-white rounded-lg flex items-center justify-center text-white dark:text-slate-950 font-bold text-base shadow-sm transition-colors">
+            <div className="w-8 h-8 bg-[#2563EB] rounded-lg flex items-center justify-center text-white font-bold text-base shadow-[0_0_15px_rgba(37,99,235,0.4)] transition-colors">
               V
             </div>
             <span className="font-display font-bold text-xl tracking-tight text-slate-950 dark:text-white uppercase transition-colors">
-              Vertex<span className="text-slate-400 dark:text-slate-300 font-light">Digital</span>
+              Vertex<span className="text-[#2563EB] font-light">Digital</span>
             </span>
           </a>
 
@@ -89,7 +89,7 @@ export default function Header({ theme, setTheme, onBudgetClick }: HeaderProps) 
                   e.preventDefault();
                   handleLinkClick(link.href);
                 }}
-                className="text-sm font-semibold text-slate-500 dark:text-neutral-400 hover:text-slate-950 dark:hover:text-white transition-colors"
+                className="text-sm font-semibold text-slate-500 dark:text-neutral-400 hover:text-[#2563EB] dark:hover:text-[#2563EB] transition-colors"
               >
                 {link.name}
               </a>
@@ -103,7 +103,7 @@ export default function Header({ theme, setTheme, onBudgetClick }: HeaderProps) 
             <div className="relative">
               <button
                 onClick={() => setShowThemeDropdown(!showThemeDropdown)}
-                className="p-2 rounded-full border border-slate-100 dark:border-neutral-800 hover:bg-slate-50 dark:hover:bg-neutral-900 transition-all flex items-center justify-center"
+                className="p-2 rounded-full border border-slate-100 dark:border-blue-500/20 hover:bg-slate-50 dark:hover:bg-blue-950/20 transition-all flex items-center justify-center"
                 aria-label="Selecionar tema"
                 id="theme-toggle-btn"
               >
@@ -122,7 +122,7 @@ export default function Header({ theme, setTheme, onBudgetClick }: HeaderProps) 
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
                       transition={{ duration: 0.15 }}
-                      className="absolute right-0 mt-2 w-36 rounded-2xl border border-slate-100 dark:border-neutral-800 bg-white dark:bg-neutral-950 p-1.5 shadow-xl z-20"
+                      className="absolute right-0 mt-2 w-36 rounded-2xl border border-slate-100 dark:border-blue-500/20 bg-white dark:bg-[#05070D] p-1.5 shadow-xl z-20"
                     >
                       {[
                         { id: "light", label: "Claro", icon: <Sun className="w-4 h-4 text-amber-500" /> },
@@ -137,8 +137,8 @@ export default function Header({ theme, setTheme, onBudgetClick }: HeaderProps) 
                           }}
                           className={`w-full flex items-center space-x-2.5 px-3 py-2 rounded-xl text-xs font-medium transition-colors ${
                             theme === item.id
-                              ? "bg-slate-50 dark:bg-neutral-900 text-slate-900 dark:text-white"
-                              : "text-slate-600 dark:text-neutral-400 hover:bg-slate-50 dark:hover:bg-neutral-900/50"
+                              ? "bg-slate-50 dark:bg-blue-950/40 text-[#2563EB] dark:text-white"
+                              : "text-slate-600 dark:text-neutral-400 hover:bg-slate-50 dark:hover:bg-blue-950/20"
                           }`}
                         >
                           {item.icon}
@@ -154,7 +154,7 @@ export default function Header({ theme, setTheme, onBudgetClick }: HeaderProps) 
             {/* CTA Primário */}
             <button
               onClick={onBudgetClick}
-              className="px-6 py-2.5 bg-slate-950 dark:bg-white text-white dark:text-slate-950 rounded-full text-sm font-semibold hover:bg-black dark:hover:bg-slate-100 transition-all active:scale-95 flex items-center gap-1.5 cursor-pointer shadow-sm border border-transparent dark:border-neutral-800"
+              className="px-6 py-2.5 bg-[#2563EB] text-white rounded-full text-sm font-semibold hover:bg-[#1d4ed8] transition-all active:scale-95 flex items-center gap-1.5 cursor-pointer shadow-[0_0_15px_rgba(37,99,235,0.4)] hover:shadow-[0_0_22px_rgba(37,99,235,0.6)] border border-transparent dark:border-blue-500/20"
               id="cta-budget-header"
             >
               <span>Solicitar Orçamento</span>
@@ -171,7 +171,7 @@ export default function Header({ theme, setTheme, onBudgetClick }: HeaderProps) 
                 const nextIndex = (themes.indexOf(theme) + 1) % themes.length;
                 setTheme(themes[nextIndex]);
               }}
-              className="p-2 rounded-xl border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-all flex items-center justify-center"
+              className="p-2 rounded-xl border border-neutral-200 dark:border-blue-500/20 hover:bg-neutral-100 dark:hover:bg-blue-950/20 transition-all flex items-center justify-center"
               aria-label="Toggle theme mobile"
               id="theme-mobile-toggle"
             >
@@ -180,7 +180,7 @@ export default function Header({ theme, setTheme, onBudgetClick }: HeaderProps) 
 
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-xl border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-all"
+              className="p-2 rounded-xl border border-neutral-200 dark:border-blue-500/20 hover:bg-neutral-100 dark:hover:bg-blue-950/20 transition-all"
               aria-label="Abrir menu"
               id="menu-toggle-mobile"
             >
@@ -199,7 +199,7 @@ export default function Header({ theme, setTheme, onBudgetClick }: HeaderProps) 
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="md:hidden border-b border-neutral-200 dark:border-neutral-800 bg-white/95 dark:bg-neutral-950/95 backdrop-blur-xl overflow-hidden shadow-2xl"
+            className="md:hidden border-b border-neutral-200 dark:border-blue-500/20 bg-white/95 dark:bg-[#05070D]/95 backdrop-blur-xl overflow-hidden shadow-2xl"
             id="mobile-menu-drawer"
           >
             <div className="px-4 pt-3 pb-8 space-y-4">
@@ -212,7 +212,7 @@ export default function Header({ theme, setTheme, onBudgetClick }: HeaderProps) 
                       e.preventDefault();
                       handleLinkClick(link.href);
                     }}
-                    className="flex items-center justify-between px-3 py-3 rounded-xl text-base font-medium text-neutral-700 dark:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-neutral-900/50 transition-colors"
+                    className="flex items-center justify-between px-3 py-3 rounded-xl text-base font-medium text-neutral-700 dark:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-blue-950/30 dark:hover:text-[#2563EB] transition-colors"
                   >
                     <span>{link.name}</span>
                     <ChevronRightMock />
@@ -220,13 +220,13 @@ export default function Header({ theme, setTheme, onBudgetClick }: HeaderProps) 
                 ))}
               </div>
 
-              <div className="px-3 pt-4 border-t border-neutral-100 dark:border-neutral-800">
+              <div className="px-3 pt-4 border-t border-neutral-100 dark:border-blue-500/20">
                 <button
                   onClick={() => {
                     setIsOpen(false);
                     onBudgetClick();
                   }}
-                  className="w-full flex items-center justify-center space-x-2 py-3 px-4 rounded-full bg-slate-950 dark:bg-white text-white dark:text-slate-950 font-semibold hover:bg-black dark:hover:bg-slate-100 active:scale-98 transition-all cursor-pointer shadow-sm"
+                  className="w-full flex items-center justify-center space-x-2 py-3 px-4 rounded-full bg-[#2563EB] text-white font-semibold hover:bg-[#1d4ed8] active:scale-98 transition-all cursor-pointer shadow-[0_0_15px_rgba(37,99,235,0.4)] border border-transparent dark:border-blue-500/20"
                 >
                   <Sparkles className="w-4 h-4" />
                   <span>Solicitar Orçamento</span>

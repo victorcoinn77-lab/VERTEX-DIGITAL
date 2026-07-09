@@ -16,7 +16,7 @@ export default function App() {
   // Inicializa o tema a partir do localStorage ou padrão para system/light
   const [theme, setTheme] = useState<Theme>(() => {
     const saved = localStorage.getItem("vertex-theme");
-    return (saved as Theme) || "system";
+    return (saved as Theme) || "dark";
   });
 
   const [selectedServiceId, setSelectedServiceId] = useState<string>("");
@@ -30,7 +30,7 @@ export default function App() {
       root.classList.remove("light", "dark");
       root.classList.add(resolvedTheme);
       // Sincroniza também a cor de fundo do body para evitar oscilações visuais
-      document.body.style.backgroundColor = resolvedTheme === "dark" ? "#0A0A0C" : "#ffffff";
+      document.body.style.backgroundColor = resolvedTheme === "dark" ? "#05070D" : "#ffffff";
     };
 
     if (theme === "system") {
@@ -67,7 +67,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#0A0A0C] text-neutral-900 dark:text-neutral-100 transition-colors duration-300 font-sans selection:bg-slate-950/10 dark:selection:bg-white/15 selection:text-neutral-900 dark:selection:text-white">
+    <div className="min-h-screen bg-white dark:bg-[#05070D] text-neutral-900 dark:text-neutral-100 transition-colors duration-300 font-sans selection:bg-blue-600/15 dark:selection:bg-blue-600/35 selection:text-neutral-900 dark:selection:text-white">
       {/* 1. SEO e Dados Estruturados */}
       <SEOConfig />
 
@@ -102,24 +102,24 @@ export default function App() {
       {/* 12. Botão Flutuante de Conversão Imediata (WhatsApp) */}
       <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end space-y-2">
         {/* Balão indicativo de atendimento rápido */}
-        <div className="hidden sm:flex items-center space-x-1.5 bg-white dark:bg-[#0D0D11] border border-neutral-150 dark:border-neutral-800 py-1.5 px-3 rounded-lg shadow-xl text-[10px] font-mono uppercase tracking-wider font-bold text-neutral-700 dark:text-neutral-300 animate-bounce">
-          <Sparkles className="w-3 h-3 text-slate-900 dark:text-white" />
+        <div className="hidden sm:flex items-center space-x-1.5 bg-white dark:bg-[#05070D] border border-neutral-150 dark:border-blue-500/20 py-1.5 px-3 rounded-lg shadow-xl text-[10px] font-mono uppercase tracking-wider font-bold text-neutral-700 dark:text-blue-400 animate-bounce shadow-blue-500/5">
+          <Sparkles className="w-3 h-3 text-slate-900 dark:text-blue-400" />
           <span>Falar com especialista</span>
         </div>
         
         <button
           onClick={handleFloatingWhatsApp}
-          className="relative w-14 h-14 rounded-full bg-slate-950 dark:bg-white text-white dark:text-slate-950 flex items-center justify-center shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 group cursor-pointer border border-transparent dark:border-neutral-800"
+          className="relative w-14 h-14 rounded-full bg-[#2563EB] text-white flex items-center justify-center shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_0_28px_rgba(37,99,235,0.6)] hover:scale-105 active:scale-95 transition-all duration-300 group cursor-pointer border border-transparent dark:border-blue-500/20"
           aria-label="Atendimento via WhatsApp"
           id="floating-whatsapp-trigger"
         >
           <MessageCircle className="w-7 h-7 fill-white/10" />
           
           {/* Badge Indicativo de Notificação Pulsante */}
-          <span className="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-red-500 border-2 border-white dark:border-[#0A0A0C] flex items-center justify-center text-[9px] font-bold text-white shadow-md">
+          <span className="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-red-500 border-2 border-white dark:border-[#05070D] flex items-center justify-center text-[9px] font-bold text-white shadow-md">
             1
           </span>
-          <span className="absolute inset-0 rounded-full bg-slate-950 dark:bg-white animate-ping opacity-25 group-hover:opacity-0 transition-opacity pointer-events-none -z-10" />
+          <span className="absolute inset-0 rounded-full bg-[#2563EB] animate-ping opacity-25 group-hover:opacity-0 transition-opacity pointer-events-none -z-10" />
         </button>
       </div>
     </div>

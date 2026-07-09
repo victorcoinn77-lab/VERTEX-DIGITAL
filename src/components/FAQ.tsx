@@ -27,13 +27,13 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="py-24 bg-white dark:bg-[#0A0A0C] transition-colors"
+      className="py-24 bg-white dark:bg-[#05070D] transition-colors"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Cabeçalho da Seção */}
         <div className="text-center mb-16 space-y-4" id="faq-header">
-          <div className="inline-block px-3 py-1 bg-neutral-100 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-300 text-[10px] font-bold uppercase tracking-widest rounded-full">
+          <div className="inline-block px-3 py-1 bg-neutral-100 dark:bg-blue-950/40 text-neutral-800 dark:text-blue-400 border border-transparent dark:border-blue-500/20 text-[10px] font-bold uppercase tracking-widest rounded-full">
             Perguntas Frequentes
           </div>
           <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 dark:text-white tracking-tight">
@@ -55,8 +55,8 @@ export default function FAQ() {
               }}
               className={`px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${
                 activeTab === category.id
-                  ? "bg-slate-950 dark:bg-white text-white dark:text-slate-950"
-                  : "text-slate-500 dark:text-neutral-400 hover:text-slate-950 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-neutral-900"
+                  ? "bg-[#2563EB] text-white shadow-[0_0_15px_rgba(37,99,235,0.4)]"
+                  : "text-slate-500 dark:text-neutral-400 hover:text-[#2563EB] dark:hover:text-[#2563EB] hover:bg-slate-50 dark:hover:bg-blue-950/20"
               }`}
             >
               {category.label}
@@ -72,7 +72,7 @@ export default function FAQ() {
             return (
               <div
                 key={faq.id}
-                className="rounded-3xl border border-slate-200/60 dark:border-neutral-800 bg-white dark:bg-[#0D0D11] hover:border-slate-400 dark:hover:border-neutral-700 hover:shadow-xl hover:shadow-neutral-500/5 transition-all duration-300 overflow-hidden"
+                className="rounded-3xl border border-slate-200/60 dark:border-blue-500/20 bg-white dark:bg-[#05070D] hover:border-blue-500/40 hover:shadow-[0_0_20px_rgba(37,99,235,0.05)] transition-all duration-300 overflow-hidden"
               >
                 <button
                   onClick={() => toggleAccordion(faq.id)}
@@ -80,7 +80,7 @@ export default function FAQ() {
                   aria-expanded={isOpen}
                 >
                   <span>{faq.question}</span>
-                  <div className={`p-1 rounded-lg border border-slate-100 dark:border-neutral-800 bg-white dark:bg-neutral-950 text-slate-400 dark:text-neutral-400 transition-transform duration-300 ${isOpen ? "rotate-180 text-slate-950 dark:text-white font-bold" : ""}`}>
+                  <div className={`p-1 rounded-lg border border-slate-100 dark:border-blue-500/20 bg-white dark:bg-blue-950/20 text-slate-400 dark:text-neutral-400 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#2563EB] dark:text-white font-bold border-[#2563EB]/40 bg-blue-950/40" : ""}`}>
                     <ChevronDown className="w-4 h-4" />
                   </div>
                 </button>
@@ -93,7 +93,7 @@ export default function FAQ() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
-                      <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-500 dark:text-neutral-400 leading-relaxed font-light border-t border-slate-100 dark:border-neutral-900/50">
+                      <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-500 dark:text-neutral-400 leading-relaxed font-light border-t border-slate-100 dark:border-blue-950/40">
                         {faq.answer}
                       </div>
                     </motion.div>

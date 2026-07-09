@@ -18,13 +18,13 @@ export default function Differentials() {
   return (
     <section
       id="diferenciais"
-      className="py-24 bg-white dark:bg-[#0A0A0C] transition-colors overflow-hidden"
+      className="py-24 bg-white dark:bg-[#05070D] transition-colors overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Cabeçalho da Seção */}
         <div className="max-w-3xl mx-auto text-center mb-16 space-y-4" id="differentials-header">
-          <div className="inline-block px-3 py-1 bg-neutral-100 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-300 text-[10px] font-bold uppercase tracking-widest rounded-full">
+          <div className="inline-block px-3 py-1 bg-neutral-100 dark:bg-blue-950/40 text-neutral-800 dark:text-blue-400 border border-transparent dark:border-blue-500/20 text-[10px] font-bold uppercase tracking-widest rounded-full">
             Diferenciais
           </div>
           <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 dark:text-white tracking-tight">
@@ -47,10 +47,10 @@ export default function Differentials() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, delay: idx * 0.08 }}
-                className="group p-8 rounded-3xl border border-slate-200/60 dark:border-neutral-800 bg-white dark:bg-[#0D0D11] hover:border-slate-400 dark:hover:border-neutral-700 hover:shadow-xl hover:shadow-neutral-500/5 transition-all duration-300 flex flex-col items-start space-y-4"
+                className="group p-8 rounded-3xl border border-slate-200/60 dark:border-blue-500/20 bg-white dark:bg-[#05070D] hover:border-[#2563EB]/45 hover:shadow-[0_0_25px_rgba(37,99,235,0.08)] transition-all duration-300 flex flex-col items-start space-y-4"
               >
                 {/* Ícone de Destaque com efeito de pulso de colres */}
-                <div className="w-10 h-10 rounded-xl bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center text-neutral-900 dark:text-neutral-100 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-10 h-10 rounded-xl bg-neutral-100 dark:bg-blue-950/40 flex items-center justify-center text-neutral-900 dark:text-[#2563EB] group-hover:scale-110 transition-transform duration-300">
                   <IconComponent className="w-5 h-5" />
                 </div>
 

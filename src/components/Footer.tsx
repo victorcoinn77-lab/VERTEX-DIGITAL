@@ -13,12 +13,12 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="bg-slate-950 text-white transition-colors border-t border-slate-900 pt-20 pb-8"
+      className="bg-[#05070D] text-white transition-colors border-t border-blue-500/20 pt-20 pb-8"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Grid Principal */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-neutral-900" id="footer-grid">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-blue-950/40" id="footer-grid">
           
           {/* Coluna 1: Branding */}
           <div className="lg:col-span-5 space-y-6" id="footer-branding">
@@ -30,13 +30,13 @@ export default function Footer() {
               }}
               className="flex items-center space-x-2.5 group"
             >
-              <div className="w-9 h-9 rounded-xl bg-white flex items-center justify-center shadow-lg">
-                <span className="font-display font-bold text-slate-950 text-lg tracking-wider">V</span>
+              <div className="w-9 h-9 rounded-xl bg-[#2563EB] flex items-center justify-center shadow-[0_0_15px_rgba(37,99,235,0.4)]">
+                <span className="font-display font-bold text-white text-lg tracking-wider">V</span>
               </div>
               <span className="font-display font-bold text-xl tracking-tight text-white">
-                {agencyConfig.name.split(" ")[0]}
-                <span className="text-slate-400 font-light">
-                  {agencyConfig.name.split(" ")[1] ? ` ${agencyConfig.name.split(" ")[1]}` : ""}
+                Vertex
+                <span className="text-[#2563EB] font-light pl-1">
+                  Digital
                 </span>
               </span>
             </a>
@@ -51,7 +51,7 @@ export default function Footer() {
                 href={agencyConfig.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl border border-neutral-800 bg-neutral-900/50 flex items-center justify-center text-slate-400 hover:text-white hover:border-neutral-700 transition-all cursor-pointer"
+                className="w-10 h-10 rounded-xl border border-blue-500/15 bg-blue-950/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-[#2563EB] hover:bg-[#2563EB]/20 hover:shadow-[0_0_10px_rgba(37,99,235,0.15)] transition-all cursor-pointer"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
@@ -60,7 +60,7 @@ export default function Footer() {
                 href={agencyConfig.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl border border-neutral-800 bg-neutral-900/50 flex items-center justify-center text-slate-400 hover:text-white hover:border-neutral-700 transition-all cursor-pointer"
+                className="w-10 h-10 rounded-xl border border-blue-500/15 bg-blue-950/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-[#2563EB] hover:bg-[#2563EB]/20 hover:shadow-[0_0_10px_rgba(37,99,235,0.15)] transition-all cursor-pointer"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-4 h-4" />
@@ -69,7 +69,7 @@ export default function Footer() {
                 href={agencyConfig.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl border border-neutral-800 bg-neutral-900/50 flex items-center justify-center text-slate-400 hover:text-white hover:border-neutral-700 transition-all cursor-pointer"
+                className="w-10 h-10 rounded-xl border border-blue-500/15 bg-blue-950/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-[#2563EB] hover:bg-[#2563EB]/20 hover:shadow-[0_0_10px_rgba(37,99,235,0.15)] transition-all cursor-pointer"
                 aria-label="GitHub"
               >
                 <Github className="w-4 h-4" />
@@ -84,16 +84,16 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm font-medium text-slate-400">
               <li>
-                <a href="#servicos" className="hover:text-white transition-colors">Gestão de Tráfego</a>
+                <a href="#servicos" className="hover:text-[#2563EB] transition-colors">Gestão de Tráfego</a>
               </li>
               <li>
-                <a href="#servicos" className="hover:text-white transition-colors">Desenvolvimento de Sites</a>
+                <a href="#servicos" className="hover:text-[#2563EB] transition-colors">Desenvolvimento de Sites</a>
               </li>
               <li>
-                <a href="#servicos" className="hover:text-white transition-colors">Desenvolvimento SaaS</a>
+                <a href="#servicos" className="hover:text-[#2563EB] transition-colors">Desenvolvimento SaaS</a>
               </li>
               <li>
-                <a href="#servicos" className="hover:text-white transition-colors">Inteligência Artificial</a>
+                <a href="#servicos" className="hover:text-[#2563EB] transition-colors">Inteligência Artificial</a>
               </li>
             </ul>
           </div>
@@ -105,17 +105,17 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3.5 text-xs sm:text-sm text-slate-400 font-light">
               <li className="flex items-start space-x-3">
-                <Mail className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+                <Mail className="w-4 h-4 text-[#2563EB] shrink-0 mt-0.5" />
                 <span className="hover:text-white transition-colors">{agencyConfig.email}</span>
               </li>
               <li className="flex items-start space-x-3">
-                <Phone className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+                <Phone className="w-4 h-4 text-[#2563EB] shrink-0 mt-0.5" />
                 <button onClick={handleWAContact} className="hover:text-white transition-colors text-left cursor-pointer">
                   {agencyConfig.phoneFormatted} (WhatsApp)
                 </button>
               </li>
               <li className="flex items-start space-x-3">
-                <MapPin className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#2563EB] shrink-0 mt-0.5" />
                 <span>{agencyConfig.address}</span>
               </li>
             </ul>
@@ -135,7 +135,7 @@ export default function Footer() {
             {/* Botão de Voltar ao Topo */}
             <button
               onClick={handleScrollToTop}
-              className="w-8 h-8 rounded-lg border border-neutral-800 bg-neutral-900/50 flex items-center justify-center hover:bg-neutral-900 hover:text-white hover:border-neutral-700 transition-all cursor-pointer"
+              className="w-8 h-8 rounded-lg border border-blue-500/20 bg-blue-950/10 flex items-center justify-center hover:bg-[#2563EB] hover:text-white hover:border-blue-500/40 transition-all cursor-pointer hover:shadow-[0_0_10px_rgba(37,99,235,0.2)]"
               aria-label="Voltar ao topo"
             >
               <ArrowUp className="w-3.5 h-3.5" />

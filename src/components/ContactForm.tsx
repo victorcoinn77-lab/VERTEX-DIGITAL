@@ -85,16 +85,16 @@ export default function ContactForm({ selectedServiceId }: ContactFormProps) {
   return (
     <section
       id="orcamento"
-      className="py-24 bg-white dark:bg-[#0A0A0C] transition-colors relative overflow-hidden bg-grid-pattern"
+      className="py-24 bg-white dark:bg-[#05070D] transition-colors relative overflow-hidden bg-grid-pattern"
     >
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[350px] h-[350px] bg-slate-400/5 rounded-full blur-[100px] pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[350px] h-[350px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none -z-10" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Lado Esquerdo: Chamada para Ação */}
           <div className="lg:col-span-5 space-y-6 text-center lg:text-left" id="contact-intro">
-            <div className="inline-block px-3 py-1 bg-neutral-100 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-300 text-[10px] font-bold uppercase tracking-widest rounded-full">
+            <div className="inline-block px-3 py-1 bg-neutral-100 dark:bg-blue-950/40 text-neutral-800 dark:text-blue-400 border border-transparent dark:border-blue-500/20 text-[10px] font-bold uppercase tracking-widest rounded-full">
               Fale Conosco
             </div>
             
@@ -107,21 +107,21 @@ export default function ContactForm({ selectedServiceId }: ContactFormProps) {
             </p>
 
             {/* Informações Rápidas de Contato */}
-            <div className="pt-6 border-t border-slate-100 dark:border-neutral-900 space-y-4 text-sm font-medium text-slate-700 dark:text-neutral-300" id="contact-quick-info">
+            <div className="pt-6 border-t border-slate-100 dark:border-blue-950/50 space-y-4 text-sm font-medium text-slate-700 dark:text-neutral-300" id="contact-quick-info">
               <div className="flex items-center justify-center lg:justify-start space-x-3">
-                <div className="w-9 h-9 rounded-xl bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center text-slate-900 dark:text-white">
+                <div className="w-9 h-9 rounded-xl bg-neutral-100 dark:bg-blue-950/40 flex items-center justify-center text-slate-900 dark:text-[#2563EB]">
                   <Mail className="w-4 h-4" />
                 </div>
                 <span>{agencyConfig.email}</span>
               </div>
               <div className="flex items-center justify-center lg:justify-start space-x-3">
-                <div className="w-9 h-9 rounded-xl bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center text-slate-900 dark:text-white">
+                <div className="w-9 h-9 rounded-xl bg-neutral-100 dark:bg-blue-950/40 flex items-center justify-center text-slate-900 dark:text-[#2563EB]">
                   <Phone className="w-4 h-4" />
                 </div>
                 <span>{agencyConfig.phoneFormatted}</span>
               </div>
               <div className="flex items-center justify-center lg:justify-start space-x-3">
-                <div className="w-9 h-9 rounded-xl bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center text-slate-900 dark:text-white">
+                <div className="w-9 h-9 rounded-xl bg-neutral-100 dark:bg-blue-950/40 flex items-center justify-center text-slate-900 dark:text-[#2563EB]">
                   <Building2 className="w-4 h-4" />
                 </div>
                 <span className="text-xs">{agencyConfig.address}</span>
@@ -131,7 +131,7 @@ export default function ContactForm({ selectedServiceId }: ContactFormProps) {
 
           {/* Lado Direito: Formulário Premium */}
           <div className="lg:col-span-7" id="contact-form-wrapper">
-            <div className="rounded-[40px] border border-slate-200/60 dark:border-neutral-800 bg-white dark:bg-[#0D0D11] p-6 sm:p-10 shadow-sm relative">
+            <div className="rounded-[40px] border border-slate-200/60 dark:border-blue-500/25 bg-white dark:bg-[#05070D] p-6 sm:p-10 shadow-sm hover:border-blue-500/35 transition-colors duration-300 relative shadow-blue-500/5">
               
               <AnimatePresence mode="wait">
                 {!submitted ? (
@@ -157,8 +157,8 @@ export default function ContactForm({ selectedServiceId }: ContactFormProps) {
                           value={formData.name}
                           onChange={handleInputChange}
                           className={`w-full px-4 py-3 rounded-2xl border ${
-                            errors.name ? "border-red-500 focus:ring-red-500/20" : "border-slate-200/60 dark:border-neutral-800 focus:border-slate-950 focus:ring-slate-950/10 dark:focus:border-white dark:focus:ring-white/10"
-                          } bg-slate-50/50 dark:bg-[#0A0A0C] text-slate-900 dark:text-white text-sm outline-none transition-all`}
+                            errors.name ? "border-red-500 focus:ring-red-500/20" : "border-slate-200/60 dark:border-blue-500/15 focus:border-[#2563EB] focus:ring-[#2563EB]/10 dark:focus:border-[#2563EB] dark:focus:ring-[#2563EB]/10"
+                          } bg-slate-50/50 dark:bg-[#05070D] text-slate-900 dark:text-white text-sm outline-none transition-all`}
                           placeholder="Ex: Guilherme Siqueira"
                         />
                         {errors.name && (
@@ -178,7 +178,7 @@ export default function ContactForm({ selectedServiceId }: ContactFormProps) {
                           name="companyName"
                           value={formData.companyName}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 rounded-2xl border border-slate-200/60 dark:border-neutral-800 focus:border-slate-950 dark:focus:border-white bg-slate-50/50 dark:bg-[#0A0A0C] text-slate-900 dark:text-white text-sm outline-none transition-all focus:ring-slate-950/10 dark:focus:ring-white/10"
+                          className="w-full px-4 py-3 rounded-2xl border border-slate-200/60 dark:border-blue-500/15 focus:border-[#2563EB] dark:focus:border-[#2563EB] bg-slate-50/50 dark:bg-[#05070D] text-slate-900 dark:text-white text-sm outline-none transition-all focus:ring-[#2563EB]/10 dark:focus:ring-[#2563EB]/10"
                           placeholder="Ex: Vanguard Imóveis"
                         />
                       </div>
@@ -194,8 +194,8 @@ export default function ContactForm({ selectedServiceId }: ContactFormProps) {
                           value={formData.email}
                           onChange={handleInputChange}
                           className={`w-full px-4 py-3 rounded-2xl border ${
-                            errors.email ? "border-red-500 focus:ring-red-500/20" : "border-slate-200/60 dark:border-neutral-800 focus:border-slate-950 focus:ring-slate-950/10 dark:focus:border-white dark:focus:ring-white/10"
-                          } bg-slate-50/50 dark:bg-[#0A0A0C] text-slate-900 dark:text-white text-sm outline-none transition-all`}
+                            errors.email ? "border-red-500 focus:ring-red-500/20" : "border-slate-200/60 dark:border-blue-500/15 focus:border-[#2563EB] focus:ring-[#2563EB]/10 dark:focus:border-[#2563EB] dark:focus:ring-[#2563EB]/10"
+                          } bg-slate-50/50 dark:bg-[#05070D] text-slate-900 dark:text-white text-sm outline-none transition-all`}
                           placeholder="Ex: contato@empresa.com"
                         />
                         {errors.email && (
@@ -216,8 +216,8 @@ export default function ContactForm({ selectedServiceId }: ContactFormProps) {
                           value={formData.phone}
                           onChange={handleInputChange}
                           className={`w-full px-4 py-3 rounded-2xl border ${
-                            errors.phone ? "border-red-500 focus:ring-red-500/20" : "border-slate-200/60 dark:border-neutral-800 focus:border-slate-950 focus:ring-slate-950/10 dark:focus:border-white dark:focus:ring-white/10"
-                          } bg-slate-50/50 dark:bg-[#0A0A0C] text-slate-900 dark:text-white text-sm outline-none transition-all`}
+                            errors.phone ? "border-red-500 focus:ring-red-500/20" : "border-slate-200/60 dark:border-blue-500/15 focus:border-[#2563EB] focus:ring-[#2563EB]/10 dark:focus:border-[#2563EB] dark:focus:ring-[#2563EB]/10"
+                          } bg-slate-50/50 dark:bg-[#05070D] text-slate-900 dark:text-white text-sm outline-none transition-all`}
                           placeholder="Ex: (11) 99999-9999"
                         />
                         {errors.phone && (
@@ -237,8 +237,8 @@ export default function ContactForm({ selectedServiceId }: ContactFormProps) {
                           value={formData.service}
                           onChange={handleInputChange}
                           className={`w-full px-4 py-3 rounded-2xl border ${
-                            errors.service ? "border-red-500 focus:ring-red-500/20" : "border-slate-200/60 dark:border-neutral-800 focus:border-slate-950 focus:ring-slate-950/10 dark:focus:border-white dark:focus:ring-white/10"
-                          } bg-slate-50/50 dark:bg-[#0A0A0C] text-slate-900 dark:text-white text-sm outline-none transition-all`}
+                            errors.service ? "border-red-500 focus:ring-red-500/20" : "border-slate-200/60 dark:border-blue-500/15 focus:border-[#2563EB] focus:ring-[#2563EB]/10 dark:focus:border-[#2563EB] dark:focus:ring-[#2563EB]/10"
+                          } bg-slate-50/50 dark:bg-[#05070D] text-slate-900 dark:text-white text-sm outline-none transition-all`}
                         >
                           <option value="">Selecione uma opção</option>
                           <option value="Gestão de Tráfego Pago">Gestão de Tráfego Pago</option>
@@ -265,7 +265,7 @@ export default function ContactForm({ selectedServiceId }: ContactFormProps) {
                         value={formData.projectDescription}
                         onChange={handleInputChange}
                         rows={3}
-                        className="w-full px-4 py-3 rounded-2xl border border-slate-200/60 dark:border-neutral-800 focus:border-slate-950 dark:focus:border-white bg-slate-50/50 dark:bg-[#0A0A0C] text-slate-900 dark:text-white text-sm outline-none transition-all focus:ring-slate-950/10 dark:focus:ring-white/10"
+                        className="w-full px-4 py-3 rounded-2xl border border-slate-200/60 dark:border-blue-500/15 focus:border-[#2563EB] dark:focus:border-[#2563EB] bg-slate-50/50 dark:bg-[#05070D] text-slate-900 dark:text-white text-sm outline-none transition-all focus:ring-[#2563EB]/10 dark:focus:ring-[#2563EB]/10"
                         placeholder="Ex: Preciso de uma Landing Page ultra rápida e estruturação de tráfego pago para captar leads qualificados."
                       />
                     </div>
@@ -273,7 +273,7 @@ export default function ContactForm({ selectedServiceId }: ContactFormProps) {
                     {/* Botão de Envio Principal */}
                     <button
                       type="submit"
-                      className="w-full flex items-center justify-center space-x-2 py-4 px-6 rounded-2xl bg-slate-950 dark:bg-white text-white dark:text-slate-950 hover:bg-black dark:hover:bg-slate-100 font-bold text-base transition-all active:scale-[0.98] shadow-sm border border-transparent dark:border-neutral-800 cursor-pointer"
+                      className="w-full flex items-center justify-center space-x-2 py-4 px-6 rounded-2xl bg-[#2563EB] text-white hover:bg-[#1d4ed8] font-bold text-base transition-all active:scale-[0.98] shadow-[0_0_15px_rgba(37,99,235,0.4)] hover:shadow-[0_0_22px_rgba(37,99,235,0.6)] border border-transparent dark:border-blue-500/20 cursor-pointer"
                     >
                       <Send className="w-5 h-5" />
                       <span>Solicitar Orçamento</span>
