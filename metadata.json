@@ -1,6 +1,6 @@
 {
   "name": "Vertex Digital",
-  "description": "Website premium da agência Vertex Digital. Desenvolvimento de sites, SaaS, tráfego pago e inteligência artificial de alta performance.",
+  "description": "Vertex Digital - Agência de tecnologia e crescimento digital premium. Soluções completas em tráfego pago, criação de sites profissionais e desenvolvimento de mini SaaS focados em escala e conversão.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
